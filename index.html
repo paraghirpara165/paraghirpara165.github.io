@@ -1,36 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Parag Hirpara</title>
+  <title>KBS Coders | Android & Flutter Apps</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      text-align: center;
-      padding: 40px;
+    * {
+      box-sizing: border-box;
     }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #111827;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
     .card {
       background: white;
-      padding: 30px;
-      max-width: 500px;
-      margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
     }
-    h1 { color: #333; }
-    p { color: #666; }
+
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      margin-bottom: 10px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .slider {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      margin-bottom: 15px;
+    }
+
+    .slider img {
+      width: 220px;
+      border-radius: 12px;
+      scroll-snap-align: center;
+    }
+
+    .slider::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .slider::-webkit-scrollbar-thumb {
+      background: #c7c7c7;
+      border-radius: 10px;
+    }
+
+    .play-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background: #16a34a;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .play-btn:hover {
+      background: #15803d;
+    }
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
   </style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h1>Parag Hirpara</h1>
-    <p>Android & Flutter Developer</p>
-    <p>📱 Mobile App Developer</p>
-    <p>📧 Contact: your@email.com</p>
+<!-- HEADER -->
+<header>
+  <h1>KBS Coders</h1>
+  <p>Android & Flutter App Development</p>
+  <p>Founder: Parag Hirpara</p>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <h2>Our Products</h2>
+
+  <div class="products">
+
+    <!-- STATUS DOWNLOADER -->
+    <div class="card">
+      <!-- Replace icon URL with Play Store icon -->
+      <img class="app-icon"
+        src="https://play-lh.googleusercontent.com/REPLACE_ICON_URL"
+        alt="Status Downloader">
+
+      <h3>Status Downloader</h3>
+      <div class="meta">⭐ 4.5 | 👇 1M+ Downloads</div>
+
+      <!-- Replace screenshots with real Play Store screenshots -->
+      <div class="slider">
+        <img src="https://play-lh.googleusercontent.com/REPLACE_SCREENSHOT_1">
+        <img src="https://play-lh.googleusercontent.com/REPLACE_SCREENSHOT_2">
+        <img src="https://play-lh.googleusercontent.com/REPLACE_SCREENSHOT_3">
+      </div>
+
+      <a class="play-btn" target="_blank"
+        href="https://play.google.com/store/apps/details?id=com.kbs.statussaver.statusdownload">
+        View on Play Store
+      </a>
+    </div>
+
+    <!-- DIAMOND HISAAB BOOK -->
+    <div class="card">
+      <img class="app-icon"
+        src="https://play-lh.googleusercontent.com/REPLACE_ICON_URL"
+        alt="Diamond Hisaab Book">
+
+      <h3>Diamond Hisaab Book</h3>
+      <div class="meta">⭐ 4.7 | 👇 100K+ Downloads</div>
+
+      <div class="slider">
+        <img src="https://play-lh.googleusercontent.com/REPLACE_SCREENSHOT_1">
+        <img src="https://play-lh.googleusercontent.com/REPLACE_SCREENSHOT_2">
+        <img src="https://play-lh.googleusercontent.com/REPLACE_SCREENSHOT_3">
+      </div>
+
+      <a class="play-btn" target="_blank"
+        href="https://play.google.com/store/apps/details?id=com.diamondhisabbook.khatabook.diamondbook">
+        View on Play Store
+      </a>
+    </div>
+
+    <!-- DIAMOND DIARY -->
+    <div class="card">
+      <img class="app-icon"
+        src="https://play-lh.googleusercontent.com/REPLACE_ICON_URL"
+        alt="Diamond Diary">
+
+      <h3>Diamond Diary</h3>
+      <div class="meta">⭐ 4.8 | 👇 50K+ Downloads</div>
+
+      <div class="slider">
+        <img src="https://play-lh.googleusercontent.com/REPLACE_SCREENSHOT_1">
+        <img src="https://play-lh.googleusercontent.com/REPLACE_SCREENSHOT_2">
+        <img src="https://play-lh.googleusercontent.com/REPLACE_SCREENSHOT_3">
+      </div>
+
+      <a class="play-btn" target="_blank"
+        href="https://play.google.com/store/apps/details?id=com.diamondhisabbook.khatabook.diary">
+        View on Play Store
+      </a>
+    </div>
+
   </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="text-align:center;">
+    📧 Email: your@email.com <br>
+    📱 Android & Flutter Developer
+  </p>
+</section>
+
+<footer>
+  © 2026 KBS Coders. All Rights Reserved.
+</footer>
 
 </body>
 </html>
