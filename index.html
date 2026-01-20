@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>KBS Coders | Android & Flutter Apps</title>
+  <title>KBS Coders | Android & Flutter App Development</title>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="KBS Coders – Professional Android & Flutter App Development. Trusted by millions of users worldwide." />
 
   <style>
     * {
@@ -16,78 +15,172 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fb;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f6f8;
       color: #1f2937;
       line-height: 1.6;
     }
 
-    /* NAVBAR */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: #0f172a;
-      padding: 14px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    nav .brand {
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #0f172a;
       display: flex;
       align-items: center;
-      gap: 10px;
-      color: white;
+      justify-content: space-between;
+      padding: 14px 30px;
+      z-index: 100;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-left img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+
+    .nav-left span {
+      color: #fff;
       font-weight: 700;
       font-size: 18px;
     }
 
-    nav .brand img {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-    }
-
     nav a {
       color: #e5e7eb;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 500;
+      margin-left: 25px;
+      font-weight: 600;
     }
 
     nav a:hover {
-      color: #60a5fa;
+      color: #22c55e;
     }
 
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #2563eb, #1e40af);
+    /* HERO */
+    header.hero {
+      min-height: 90vh;
+      background: radial-gradient(circle at top, #2563eb, #1e3a8a);
       color: white;
-      padding: 90px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 20px 80px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+    header.hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(
+        rgba(255,255,255,0.08) 1px,
+        transparent 1px
+      );
+      background-size: 40px 40px;
+      opacity: 0.3;
     }
 
-    header p {
-      font-size: 18px;
-      opacity: 0.95;
+    .hero-content {
+      max-width: 900px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* SECTION */
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hero p.main {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .hero p.sub {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 35px;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+    }
+
+    .btn-primary {
+      background: #22c55e;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .btn-primary:hover {
+      background: #16a34a;
+    }
+
+    .btn-secondary {
+      border: 2px solid rgba(255,255,255,0.6);
+      padding: 14px 30px;
+      border-radius: 10px;
+      color: white;
+      font-weight: 600;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 45px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .hero-stats div h3 {
+      font-size: 36px;
+      font-weight: 800;
+    }
+
+    .hero-stats div span {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .founder {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* SECTIONS */
     section {
-      padding: 70px 20px;
+      padding: 80px 20px;
       max-width: 1200px;
       margin: auto;
     }
 
     h2 {
       text-align: center;
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 50px;
     }
 
@@ -95,24 +188,18 @@
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 35px;
+      gap: 30px;
     }
 
     .card {
       background: white;
-      border-radius: 20px;
       padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       text-align: center;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 25px 55px rgba(0,0,0,0.12);
-    }
-
-    .app-icon {
+    .card img {
       width: 90px;
       height: 90px;
       border-radius: 22px;
@@ -121,33 +208,32 @@
 
     .card h3 {
       font-size: 20px;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .meta {
-      font-size: 14px;
       color: #6b7280;
-      margin-bottom: 18px;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
     .play-btn {
       display: inline-block;
-      padding: 12px 22px;
-      background: #22c55e;
+      background: #2563eb;
       color: white;
+      padding: 12px 22px;
       border-radius: 8px;
-      text-decoration: none;
       font-weight: 600;
     }
 
     .play-btn:hover {
-      background: #16a34a;
+      background: #1d4ed8;
     }
 
     /* CONTACT */
     #contact p {
       text-align: center;
-      font-size: 16px;
+      font-size: 18px;
       color: #374151;
     }
 
@@ -156,8 +242,14 @@
       background: #0f172a;
       color: #9ca3af;
       text-align: center;
-      padding: 28px;
+      padding: 25px;
       font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 40px;
+      }
     }
   </style>
 </head>
@@ -166,10 +258,11 @@
 
 <!-- NAV -->
 <nav>
-  <div class="brand">
+  <div class="nav-left">
     <img src="assets/icons/kbs_logo.jpg" alt="KBS Coders Logo">
-    KBS Coders
+    <span>KBS Coders</span>
   </div>
+
   <div>
     <a href="#products">Products</a>
     <a href="#contact">Contact</a>
@@ -177,10 +270,34 @@
 </nav>
 
 <!-- HERO -->
-<header>
-  <h1>KBS Coders</h1>
-  <p>Professional Android & Flutter App Development</p>
-  <p style="margin-top:10px;">Founded by Parag Hirpara</p>
+<header class="hero">
+  <div class="hero-content">
+    <h1>KBS Coders</h1>
+    <p class="main">Professional Android & Flutter App Development</p>
+    <p class="sub">Scalable • Secure • High-Performance Mobile Applications</p>
+
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary">Explore Our Apps</a>
+      <a href="#contact" class="btn-secondary">Contact Us</a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <h3>10+</h3>
+        <span>Apps Built</span>
+      </div>
+      <div>
+        <h3>1.5M+</h3>
+        <span>Total Downloads</span>
+      </div>
+      <div>
+        <h3>4.7★</h3>
+        <span>Avg Rating</span>
+      </div>
+    </div>
+
+    <p class="founder">Founded by <strong>Parag Hirpara</strong></p>
+  </div>
 </header>
 
 <!-- PRODUCTS -->
@@ -190,31 +307,31 @@
   <div class="products">
 
     <div class="card">
-      <img class="app-icon" src="assets/icons/status_downloader.png" alt="Status Downloader">
+      <img src="assets/icons/status_downloader.png">
       <h3>Status Downloader</h3>
-      <div class="meta">⭐ 4.5 · 1M+ Downloads</div>
+      <div class="meta">⭐ 4.5 | 👇 1M+ Downloads</div>
       <a class="play-btn" target="_blank"
-         href="https://play.google.com/store/apps/details?id=com.kbs.statussaver.statusdownload">
+        href="https://play.google.com/store/apps/details?id=com.kbs.statussaver.statusdownload">
         View on Play Store
       </a>
     </div>
 
     <div class="card">
-      <img class="app-icon" src="assets/icons/diamond_hisab_book.png" alt="Diamond Hisaab Book">
+      <img src="assets/icons/diamond_hisab_book.png">
       <h3>Diamond Hisaab Book</h3>
-      <div class="meta">⭐ 4.7 · 100K+ Downloads</div>
+      <div class="meta">⭐ 4.7 | 👇 100K+ Downloads</div>
       <a class="play-btn" target="_blank"
-         href="https://play.google.com/store/apps/details?id=com.diamondhisabbook.khatabook.diamondbook">
+        href="https://play.google.com/store/apps/details?id=com.diamondhisabbook.khatabook.diamondbook">
         View on Play Store
       </a>
     </div>
 
     <div class="card">
-      <img class="app-icon" src="assets/icons/diamond_diary.png" alt="Diamond Diary">
+      <img src="assets/icons/diamond_diary.png">
       <h3>Diamond Diary</h3>
-      <div class="meta">⭐ 4.8 · 50K+ Downloads</div>
+      <div class="meta">⭐ 4.8 | 👇 50K+ Downloads</div>
       <a class="play-btn" target="_blank"
-         href="https://play.google.com/store/apps/details?id=com.diamondhisabbook.khatabook.diary">
+        href="https://play.google.com/store/apps/details?id=com.diamondhisabbook.khatabook.diary">
         View on Play Store
       </a>
     </div>
@@ -226,8 +343,8 @@
 <section id="contact">
   <h2>Contact</h2>
   <p>
-    📧 Email: kbscoders165@gmail.com<br>
-    📱 Android & Flutter App Development
+    📧 Email: your@email.com <br>
+    📱 Android & Flutter App Developer
   </p>
 </section>
 
